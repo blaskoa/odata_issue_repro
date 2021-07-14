@@ -25,7 +25,7 @@ namespace WebApplication
                 builder.UseSqlServer();
             });
             services.AddRouting();
-            services.AddControllers().AddOData(opt => opt.AddModel(CreateModel()).Expand().Filter().Count().Select().OrderBy().SetMaxTop(1000));
+            services.AddControllers().AddOData(opt => opt.AddRouteComponents(CreateModel()).Expand().Filter().Count().Select().OrderBy().SetMaxTop(1000));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

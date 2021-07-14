@@ -8,7 +8,7 @@ using WebApplication.Models;
 
 namespace WebApplication.Controllers
 {
-    [ODataModel]
+    [ODataRouteComponent]
     public class ChildrenController : ODataController
     {
         private readonly MyDbContext _context;
